@@ -2,6 +2,7 @@ package uiTest;
 
 import base.baseTest;
 import dataproviders.CSVDataProvider;
+import dataproviders.ExcelDataProvider;
 import dataproviders.LoginDataProvider;
 import driver.DriverManager;
 import io.qameta.allure.Description;
@@ -18,7 +19,7 @@ public class loginTest extends baseTest {
 
     @Test(groups = "smoke" ,
             retryAnalyzer = retry.RetryAnalyzer.class,
-            dataProviderClass = CSVDataProvider.class,
+            dataProviderClass = ExcelDataProvider.class,
             dataProvider  = "loginData")
     @Description("Login with the valid username and Password")
 
