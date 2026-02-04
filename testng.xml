@@ -1,0 +1,28 @@
+<suite name="Automation Suite" parallel="methods" thread-count="3">
+<!--    <listeners>-->
+<!--        <listener class-name="listeners.TestListeners"/>-->
+<!--    </listeners>-->
+    <listeners>
+        <listener class-name="listeners.TestListeners"/>
+    </listeners>
+
+    <test name="UI Tests Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="uiTest.loginTest"/>
+        </classes>
+    </test>
+<!--    </test>-->
+<!--    <test name="UI Tests Firefox">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="uiTest.loginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="UI Tests Edge">-->
+<!--        <parameter name="browser" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="uiTest.loginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
