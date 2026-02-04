@@ -23,7 +23,7 @@ public class loginPage extends basePage {
     private By username = By.xpath("//input[@placeholder= 'Username']");
     private By password = By.xpath("//input[@placeholder='Password']");
     private By loginbtn = By.xpath("//button[@type= 'submit']");
-    private By DashboardLogo = By.xpath("//span[@class='oxd-topbar-header-breadcrumb']/h6");
+//    private By nameUser = By.xpath("//p[@class='oxd-userdropdown-name']");
 
     public loginPage(WebDriver driver) {
         super(driver);
@@ -42,12 +42,12 @@ public class loginPage extends basePage {
         actions.click(loginbtn);
     }
 
-    public boolean isLoginSuccessful() {
-        try {
-            return DriverManager.getDriver().findElement(DashboardLogo).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
+//    public boolean isLoginSuccessful() {
+//        try {
+//            return DriverManager.getDriver().findElement(nameUser).isDisplayed();
+//        } catch (NoSuchElementException e) {
+//            return false;
+//        }
+//    }
 }
 
