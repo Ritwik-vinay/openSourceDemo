@@ -246,7 +246,7 @@ public Object[][] getLoginData() {
     return ExcelUtils.readExcelData("testdata.xlsx", "LoginSheet");
 }
 
-@Test(dataProvider = "loginData")
+@Test(dataproviders = "loginData")
 public void testLogin(String username, String password) {
     // Test implementation
 }
