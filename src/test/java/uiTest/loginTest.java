@@ -4,6 +4,7 @@ import base.baseTest;
 import dataproviders.CSVDataProvider;
 import dataproviders.ExcelDataProvider;
 import dataproviders.LoginDataProvider;
+import dataproviders.UnifiedDataProvider;
 import driver.DriverManager;
 import io.qameta.allure.Description;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ public class loginTest extends baseTest {
 
     @Test(groups = "smoke" ,
             retryAnalyzer = retry.RetryAnalyzer.class,
-            dataProviderClass = ExcelDataProvider.class,
+            dataProviderClass = UnifiedDataProvider.class,
             dataProvider  = "loginData")
     @Description("Login with the valid username and Password")
 

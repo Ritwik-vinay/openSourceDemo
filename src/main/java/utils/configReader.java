@@ -1,5 +1,7 @@
 package utils;
 
+import enums.DataSourceType;
+
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -18,5 +20,11 @@ public class configReader {
     }
     public static String get(String key){
         return properties.getProperty(key);
+    }
+
+    public static DataSourceType getSourceDataType(){
+        return DataSourceType.valueOf(
+                System.getProperty("dataSource","CSV").toUpperCase()
+        );
     }
 }
