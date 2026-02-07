@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class configReader {
+
     public static Properties properties = new Properties();
     static {
         try (

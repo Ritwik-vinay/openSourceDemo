@@ -1,16 +1,18 @@
 package pages;
 
 import base.basePage;
-import driver.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.LoggerUtil;
 import utils.configReader;
 import utils.elementActions;
 import utils.waitUtils;
+import org.slf4j.Logger;
 
-import java.util.NoSuchElementException;
+
 
 public class loginPage extends basePage {
+    private Logger log = LoggerUtil.getLogger(loginPage.class);
     private elementActions actions;
     //    @FindBy(xpath = "//input[@placeholder= 'Username']")
 //    private WebElement username;
@@ -37,6 +39,7 @@ public class loginPage extends basePage {
     }
 
     public void login(String user, String pass) {
+        log.info("Attempting login for user: {}"+  user);
         actions.type(username, "Admin");
         actions.type(password, "admin123");
         actions.click(loginbtn);
